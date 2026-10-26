@@ -1,28 +1,28 @@
 
 const products = [
   {
-    name: "Amla Powder",
-    image: "./image/01_Amla_Powder.jpg",
+    name: "Amla_Powder",
+    image: "./image/Amla_Powder.jpg",
     category: "Health & Wellness",
   },
   {
     name: "Beetroot Powder",
-    image: "/image/beetroot-powder.png",
+    image: "/image/Masroom.png",
     category: "Natural Superfoods",
   },
   {
     name: "Makhana",
-    image: "/image/makhana.png",
+    image: "/image/Makhana.png",
     category: "Healthy Snacks",
   },
   {
     name: "Herbal Hair Oil",
-    image: "/image/hair-oil.png",
+    image: "/image/Beauty.png",
     category: "Beauty & Personal Care",
   },
   {
     name: "Natural Face Wash",
-    image: "/image/face-wash.png",
+    image: "/image/facewash.png",
     category: "Natural Beauty",
   },
   {
@@ -66,7 +66,7 @@ export default function FeaturedProduct() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-full w-full object-contain"
+                  className="h-full  w-100px object-contain "
                 />
               </div>
 

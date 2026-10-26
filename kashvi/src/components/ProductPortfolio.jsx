@@ -3,7 +3,7 @@ const categories = [
   {
     title: "Health & Wellness",
     description: "Superfoods • Functional Nutrition • Natural Wellness",
-    image: "/image/Herbal.png",
+    image: "/image/hhww.png",
     color: "bg-emerald-50",
     button: "bg-[#25483d]",
   },
@@ -17,14 +17,14 @@ const categories = [
   {
     title: "Beauty & Personal Care",
     description: "Natural • Herbal • Clean Beauty",
-    image: "/image/beauty.png",
+    image: "/image/bea.png",
     color: "bg-pink-50",
     button: "bg-[#96516c]",
   },
   {
     title: "Home Decor & Gifts",
     description: "Handcrafted • Heritage • Premium Living",
-    image: "/image/home-decor.png",
+    image: "/image/home.png",
     color: "bg-amber-50",
     button: "bg-[#806354]",
   },
@@ -63,7 +63,7 @@ export default function ProductPortfolio() {
               text-center shadow-sm transition duration-300
               hover:-translate-y-1 hover:shadow-lg`}
             >
-              <div className="h-36 overflow-hidden">
+              <div className="h-50px overflow-hidden">
                 <img
                   src={category.image}
                   alt={category.title}
