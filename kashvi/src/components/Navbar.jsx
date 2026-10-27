@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
   { name: "Home", path: "/home" },
-  { name: "Our Products", path: "/our-products" },
   { name: "Health & Wellness", path: "/health-wellness" },
   { name: "FMCG", path: "/fmcg" },
   { name: "Beauty & Personal Care", path: "/beauty-personal-care" },
