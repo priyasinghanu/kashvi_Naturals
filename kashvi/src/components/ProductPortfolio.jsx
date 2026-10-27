@@ -1,14 +1,17 @@
-
+import { Link } from "react-router-dom";
 const categories = [
   {
-    title: "Health & Wellness",
-    description: "Superfoods • Functional Nutrition • Natural Wellness",
-    image: "/image/hhww.png",
+  title: "Health & Wellness",
+  path: "/health-wellness",
+  description: "Ready-to-Eat • Ready-to-Cook • Healthy Snacks",
+  image: "/image/hhww.png",
     color: "bg-emerald-50",
     button: "bg-[#25483d]",
-  },
+},
+
   {
     title: "FMCG",
+    path: "/FMCG",
     description: "Ready-to-Eat • Ready-to-Cook • Healthy Snacks",
     image: "/image/fmcg.png",
     color: "bg-orange-50",
@@ -16,6 +19,7 @@ const categories = [
   },
   {
     title: "Beauty & Personal Care",
+    path: "/Beauty & Personal Care",
     description: "Natural • Herbal • Clean Beauty",
     image: "/image/bea.png",
     color: "bg-pink-50",
@@ -23,6 +27,7 @@ const categories = [
   },
   {
     title: "Home Decor & Gifts",
+    path: "/Home Decor & Gifts",
     description: "Handcrafted • Heritage • Premium Living",
     image: "/image/home.png",
     color: "bg-amber-50",
@@ -30,6 +35,7 @@ const categories = [
   },
   {
     title: "Fashion & Lifestyle",
+     path: "/Fashion & Lifestyle",
     description: "Ethnic • Handcrafted • Contemporary Lifestyle",
     image: "/image/fashion.png",
     color: "bg-rose-50",
@@ -63,6 +69,8 @@ export default function ProductPortfolio() {
               text-center shadow-sm transition duration-300
               hover:-translate-y-1 hover:shadow-lg`}
             >
+        
+
               <div className="h-50px overflow-hidden">
                 <img
                   src={category.image}
@@ -83,8 +91,13 @@ export default function ProductPortfolio() {
                 <button
                   className={`${category.button} rounded-full px-6 py-2
                   text-sm font-medium text-white transition hover:opacity-90`}
+                > <Link
+              to={category.path}
+               className="inline-block rounded-full bg-transparent px-5 py-2 text-white hover:bg-transparent"
                 >
-                  Explore <span className="ml-1">→</span>
+               Explore <span className="ml-1">→</span>
+          </Link>
+              
                 </button>
               </div>
             </article>
