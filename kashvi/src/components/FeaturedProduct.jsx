@@ -35,7 +35,7 @@ const products = [
 export default function FeaturedProduct() {
   return (
     <section className="bg-white px-5 py-10 md:px-10">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-8xl">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div className="flex-1 text-center">
             <h2 className="flex items-center justify-center gap-2 text-2xl font-bold text-[#25483d] md:text-3xl">
@@ -46,9 +46,7 @@ export default function FeaturedProduct() {
               Premium Functional Superfoods
             </p>
 
-            <p className="mt-1 text-sm text-gray-500">
-              Pure • Natural • Nutritious • Authentic
-            </p>
+           
           </div>
 
           <button className="rounded-full bg-[#25483d] px-5 py-3 text-sm font-medium text-white hover:bg-[#18362d]">

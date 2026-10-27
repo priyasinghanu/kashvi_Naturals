@@ -2,7 +2,7 @@
 export default function Footer() {
   return (
     <footer className="bg-[#244b3f] px-6 py-10 text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-2 md:grid-cols-4">
+      <div className="mx-auto grid max-w-8xl gap-8 sm:grid-cols-2 md:grid-cols-4">
 
         <div>
           <h2 className="text-2xl font-bold">Kashvi Naturals</h2>

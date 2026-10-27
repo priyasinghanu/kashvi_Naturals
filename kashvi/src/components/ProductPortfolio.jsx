@@ -46,19 +46,13 @@ const categories = [
 export default function ProductPortfolio() {
   return (
     <section className="bg-white px-5 py-12 md:px-10">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-8xl">
         <div className="mb-8 text-center">
           <h2 className="flex items-center justify-center gap-3 text-2xl font-bold text-[#25483d] md:text-3xl">
             <span>🌿</span>
             Our Product Portfolio
             <span>🌿</span>
           </h2>
-
-          <p className="mt-3 text-sm text-gray-600 md:text-base">
-            5 Strategic Product Categories
-            <span className="mx-2">|</span>
-            20 Carefully Curated Premium Products in Each Category
-          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">

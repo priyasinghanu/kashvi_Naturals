@@ -1,4 +1,76 @@
 import { useState, useEffect } from "react";
+const rows = [
+  {
+    category: "Ready-to-Eat",
+    subtitle: "Healthy & Tasty Snacks for Every Moment",
+    icon: "🥣",
+    products: [
+      { name: "Roasted Makhana", price: 249, image: "/image/Makhana.png" },
+      { name: "Mixed Seeds Snack", price: 299, image: "/image/Seeds.png" },
+      { name: "Beetroot Chips", price: 249, image: "/image/Beetroot.png" },
+      { name: "Millet Cookies", price: 199, image: "/image/Cookies.png" },
+    ],
+    bannerTitle: "Healthy Snacks, Healthy Life",
+    bannerImage: "/image/snacks-banner.png",
+    color: "bg-orange-50",
+  },
+  {
+    category: "Ready-to-Cook",
+    subtitle: "Natural Ingredients for Easy & Healthy Cooking",
+    icon: "🍲",
+    products: [
+      { name: "Multi Millet Mix", price: 299, image: "/image/MilletMix.png" },
+      { name: "Instant Soup Mix", price: 249, image: "/image/SoupMix.png" },
+      { name: "Pancake Mix", price: 299, image: "/image/PancakeMix.png" },
+      { name: "Idli Dosa Mix", price: 249, image: "/image/IdliDosaMix.png" },
+    ],
+    bannerTitle: "Wholesome Meals Made Simple",
+    bannerImage: "/image/meals-banner.png",
+    color: "bg-rose-50",
+  },
+  {
+    category: "Ready-to-Drink",
+    subtitle: "Natural Beverages for a Refreshing You",
+    icon: "🥤",
+    products: [
+      { name: "Lemon Grass Tea", price: 299, image: "/image/Tea.png" },
+      { name: "Amla Juice", price: 249, image: "/image/AmlaJuice.png" },
+      { name: "Beetroot Juice", price: 249, image: "/image/BeetrootJuice.png" },
+      { name: "Herbal Drink Mix", price: 299, image: "/image/HerbalDrink.png" },
+    ],
+    bannerTitle: "Refresh Rejuvenate Stay Natural",
+    bannerImage: "/image/drink-banner.png",
+    color: "bg-green-50",
+  },
+  {
+    category: "Premium Grocery",
+    subtitle: "Everyday Essentials in Pure & Natural Form",
+    icon: "🛍️",
+    products: [
+      { name: "Sona Chur Rice", price: 299, image: "/image/Rice.png" },
+      { name: "Katarni Rice", price: 349, image: "/image/KatarniRice.png" },
+      { name: "Millet Flour Mix", price: 249, image: "/image/MilletFlour.png" },
+      { name: "Jaggery Powder", price: 199, image: "/image/Jaggery.png" },
+    ],
+    bannerTitle: "Pure Grocery Pure Health",
+    bannerImage: "/image/grocery-banner.png",
+    color: "bg-amber-50",
+  },
+  {
+    category: "Healthy Snacks",
+    subtitle: "Nutritious Snacks for a Better You",
+    icon: "🌿",
+    products: [
+      { name: "Trail Mix", price: 299, image: "/image/TrailMix.png" },
+      { name: "Fox Nuts", price: 249, image: "/image/FoxNuts.png" },
+      { name: "Energy Bites", price: 249, image: "/image/EnergyBites.png" },
+      { name: "Granola Mix", price: 299, image: "/image/Granola.png" },
+    ],
+    bannerTitle: "Snack Smart Live Healthy",
+    bannerImage: "/image/granola-banner.png",
+    color: "bg-emerald-50",
+  },
+];
 
 const banners = [
   {
@@ -30,29 +102,29 @@ export default function HealthWellness() {
       <img
         src={banners[current].image}
         alt={banners[current].alt}
-        className="w-full h-full object-cover overflow-hidden"
+        className="w-full h-140 object-cover"
       />
-      <button
-        onClick={() =>
-          setCurrent(
-            (current - 1 + banners.length) % banners.length
-          )
-        }
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full px-4 py-2"
-      >
-        
-      </button>
+       <button
+          type="button"
+          aria-label="Previous banner"
+          onClick={() =>
+            setCurrent((current - 1 + banners.length) % banners.length)
+          }
+          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-4 py-2 shadow"
+        >
+          ❮
+        </button>
 
-      <button
-        onClick={() =>
-          setCurrent((current + 1) % banners.length)
-        }
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full px-4 py-2"
-      >
-        
-      </button>
-<div>
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        <button
+          type="button"
+          aria-label="Next banner"
+          onClick={() => setCurrent((current + 1) % banners.length)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-4 py-2 shadow"
+        >
+          ❯
+        </button>
+
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {banners.map((_, index) => (
           <button
             key={index}
@@ -62,10 +134,11 @@ export default function HealthWellness() {
             }`}
             aria-label={`Slide ${index + 1}`}
           />
-        ))}
-      </div>
+          ))}
+        </div>
+      
     <section className="min-h-screen bg-[#f7f8f2] px-6 py-5">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-8xl">
         <h1 className="text-4xl bg-amber-200 font-semibold uppercase tracking-widest text-green-700 text-center">
           Super Food
         </h1>
@@ -110,6 +183,6 @@ export default function HealthWellness() {
       </div>
     </section>
     </div>
-    </div>
+    
   );
 }

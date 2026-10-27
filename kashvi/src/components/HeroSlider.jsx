@@ -32,26 +32,25 @@ export default function HeroSlider() {
         alt={banners[current].alt}
         className="w-full h-140 object-cover"
       />
-      <button
-        onClick={() =>
-          setCurrent(
-            (current - 1 + banners.length) % banners.length
-          )
-        }
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full px-4 py-2"
-      >
-        
-      </button>
+     <button
+          type="button"
+          aria-label="Previous banner"
+          onClick={() =>
+            setCurrent((current - 1 + banners.length) % banners.length)
+          }
+          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-4 py-2 shadow"
+        >
+          ❮
+        </button>
 
-      <button
-        onClick={() =>
-          setCurrent((current + 1) % banners.length)
-        }
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full px-4 py-2"
-      >
-        
-      </button>
-
+        <button
+          type="button"
+          aria-label="Next banner"
+          onClick={() => setCurrent((current + 1) % banners.length)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-4 py-2 shadow"
+        >
+          ❯
+        </button>
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {banners.map((_, index) => (
           <button

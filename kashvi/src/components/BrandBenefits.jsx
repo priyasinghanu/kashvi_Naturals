@@ -4,7 +4,7 @@ export default function BeautyPersonalCare() {
     {
       name: "Natural Face Wash",
       description: "Gentle care for your daily skincare routine.",
-      image: "/image/Herbal.png",
+      image: "/image/facewash.png",
     },
     {
       name: "Herbal Hair Oil",
@@ -14,13 +14,13 @@ export default function BeautyPersonalCare() {
     {
       name: "Beauty & Personal Care",
       description: "Explore our nature-inspired personal care collection.",
-      image: "/image/1.png",
+      image: "/image/bea.png",
     },
   ];
 
   return (
     <section className="min-h-screen bg-pink-50 px-6 py-14">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-8xl">
         <p className="font-semibold uppercase tracking-widest text-pink-700">
           Kashvi Naturals Collection
         </p>
