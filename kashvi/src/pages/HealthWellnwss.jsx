@@ -104,7 +104,7 @@ export default function HealthWellness() {
         alt={banners[current].alt}
         className="w-full h-140 object-cover"
       />
-       <button
+        <button
           type="button"
           aria-label="Previous banner"
           onClick={() =>
@@ -123,8 +123,7 @@ export default function HealthWellness() {
         >
           ❯
         </button>
-
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {banners.map((_, index) => (
           <button
             key={index}
@@ -134,8 +133,8 @@ export default function HealthWellness() {
             }`}
             aria-label={`Slide ${index + 1}`}
           />
-          ))}
-        </div>
+        ))}
+      </div>
       
     <section className="min-h-screen bg-[#f7f8f2] px-6 py-5">
       <div className="mx-auto max-w-8xl">

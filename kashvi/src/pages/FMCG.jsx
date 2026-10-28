@@ -90,7 +90,7 @@ export default function FMCG() {
 
   return (
     <main className="min-h-screen bg-[#fbfaf7]">
-      {/* Top banner slider */}
+      
       <div className="relative w-full overflow-hidden">
         <img
         src={banners[current].image}
@@ -98,7 +98,7 @@ export default function FMCG() {
         className="w-full h-140 object-cover"
       />
 
-        <button
+         <button
           type="button"
           aria-label="Previous banner"
           onClick={() =>
@@ -106,7 +106,7 @@ export default function FMCG() {
           }
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-4 py-2 shadow"
         >
-          
+          ❮
         </button>
 
         <button
@@ -115,22 +115,20 @@ export default function FMCG() {
           onClick={() => setCurrent((current + 1) % banners.length)}
           className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-4 py-2 shadow"
         >
-          
+          ❯
         </button>
-
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-          {banners.map((banner, index) => (
-            <button
-              key={banner.image}
-              type="button"
-              aria-label={`Slide ${index + 1}`}
-              onClick={() => setCurrent(index)}
-              className={`h-3 w-3 rounded-full ${
-                current === index ? "bg-white" : "bg-gray-400"
-              }`}
-            />
-          ))}
-        </div>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`h-3 w-3 rounded-full ${
+              current === index ? "bg-white" : "bg-gray-400"
+            }`}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
+      </div>
       </div>
 
      

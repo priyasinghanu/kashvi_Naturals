@@ -1,5 +1,12 @@
+import { useState, useEffect } from "react";
 
+const banners = [
+  { image: "/image/b1.png", alt: "FMCG Collection" },
+  { image: "/image/b2.png", alt: "Natural Food Products" },
+  { image: "/image/b3.png", alt: "Healthy Everyday Products" },
+];
 export default function HomeDecorGifts() {
+  const [current, setCurrent] = useState(0);
   return (
     <section className="min-h-screen bg-amber-50 px-6 py-16">
       <div className="mx-auto max-w-7xl">

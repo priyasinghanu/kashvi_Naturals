@@ -30,6 +30,11 @@ const products = [
     image: "/image/superfood.png",
     category: "Premium Nutrition",
   },
+   {
+    name: "Organic Superfood",
+    image: "/image/superfood.png",
+    category: "Premium Nutrition",
+  },
 ];
 
 export default function FeaturedProduct() {
