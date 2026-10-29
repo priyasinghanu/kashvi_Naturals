@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
@@ -13,31 +14,32 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="flex flex-wrap items-center justify-between gap-4 px-5 py-4 lg:px-10">
-        <Link to="/home" className="shrink-0">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 lg:px-8">
+
+        {/* Logo */}
+        <Link to="/home" onClick={() => setMenuOpen(false)}>
           <img
             src="/image/logo.png"
-            alt="Kashvi Naturals"
-            className="h-12 w-auto object-contain"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
+            alt="Kashvi Natural"
+            className="h-10 w-auto object-contain sm:h-12"
           />
-         
         </Link>
 
-        <nav className="flex flex-1 flex-wrap items-center justify-center gap-x-5 gap-y-3">
+        {/* Desktop Menu */}
+        <nav className="hidden flex-wrap items-center justify-center gap-x-4 xl:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `text-sm font-medium transition hover:text-[#78916b] ${
+                `py-2 text-sm font-medium transition ${
                   isActive
                     ? "border-b-2 border-[#244b3f] text-[#244b3f]"
-                    : "text-gray-700"
+                    : "text-gray-700 hover:text-[#78916b]"
                 }`
               }
             >
@@ -46,18 +48,78 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4 text-sm text-[#244b3f]">
-          <Link to="/login" className="hover:underline">
-            Login / Register
+        {/* Desktop Account Links */}
+        <div className="hidden items-center gap-3 text-sm text-[#244b3f] 2xl:flex">
+          <Link to="/login">Login / Register</Link>
+          <Link to="/wishlist">Wishlist</Link>
+          <Link to="/cart">Cart</Link>
+        </div>
+
+        {/* Mobile Actions */}
+        <div className="flex items-center gap-3 xl:hidden">
+          <Link
+            to="/wishlist"
+            aria-label="Wishlist"
+            className="text-xl text-[#244b3f] sm:hidden"
+          >
+            ♡
           </Link>
-          <Link to="/wishlist" className="hover:underline">
-            Wishlist
+
+          <Link
+            to="/cart"
+            aria-label="Cart"
+            className="text-xl sm:hidden"
+          >
+            🛒
           </Link>
-          <Link to="/cart" className="hover:underline">
-            Cart
-          </Link>
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            className="rounded-md border border-gray-200 px-3 py-2 text-2xl text-[#244b3f]"
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
         </div>
       </div>
+
+      {/* Mobile and Tablet Menu */}
+      {menuOpen && (
+        <div className="border-t border-gray-100 bg-white px-5 py-3 shadow-md xl:hidden">
+          <nav className="flex flex-col">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) =>
+                  `border-b border-gray-100 py-3 text-sm font-medium ${
+                    isActive
+                      ? "text-[#244b3f]"
+                      : "text-gray-700 hover:text-[#78916b]"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
+
+            <div className="flex flex-wrap gap-5 py-4 text-sm font-medium text-[#244b3f]">
+              <Link to="/login" onClick={() => setMenuOpen(false)}>
+                Login / Register
+              </Link>
+              <Link to="/wishlist" onClick={() => setMenuOpen(false)}>
+                Wishlist
+              </Link>
+              <Link to="/cart" onClick={() => setMenuOpen(false)}>
+                Cart
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
