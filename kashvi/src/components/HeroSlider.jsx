@@ -30,7 +30,7 @@ export default function HeroSlider() {
       <img
         src={banners[current].image}
         alt={banners[current].alt}
-        className="w-full h-140 object-cover"
+        className="w-full h-160 object-cover"
       />
      <button
           type="button"

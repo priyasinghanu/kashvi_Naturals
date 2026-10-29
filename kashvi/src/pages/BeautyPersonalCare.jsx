@@ -85,7 +85,7 @@ function ProductCard({ name, index, onAddToCart }) {
         <img
           src={productImages[name]}
           alt={name}
-          className="h-full w-full object-contain"
+          className="h-155 w-full object-contain"
           loading="lazy"
           onError={(e) => {
             e.currentTarget.style.visibility = "hidden";

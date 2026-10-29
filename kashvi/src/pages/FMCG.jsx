@@ -95,7 +95,7 @@ export default function FMCG() {
         <img
         src={banners[current].image}
         alt={banners[current].alt}
-        className="w-full h-140 object-cover"
+        className="w-full h-155 object-cover"
       />
 
          <button
