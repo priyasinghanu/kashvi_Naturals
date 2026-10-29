@@ -36,14 +36,14 @@ const productImages = {
   "Mixed Seeds Snack": "/image/Seeds Snack.png",
   "Beetroot Chips": "/image/Beetroot Chips.png",
   "Millet Cookies": "/image/Millet Cookies.png",
-  "Multi Millet Mix": "/image/MilletMix.png",
-  "Instant Soup Mix": "/image/SoupMix.png",
-  "Pancake Mix": "/image/PancakeMix.png",
-  "Idli Dosa Mix": "/image/IdliDosaMix.png",
-  "Lemon Grass Tea": "/image/Tea.png",
-  "Amla Juice": "/image/AmlaJuice.png",
-  "Beetroot Juice": "/image/BeetrootJuice.png",
-  "Herbal Drink Mix": "/image/HerbalDrink.png",
+  "Multi Millet Mix": "/image/mmm.png",
+  "Instant Soup Mix": "/image/ism.png",
+  "Pancake Mix": "/image/pcm.png",
+  "Idli Dosa Mix": "/image/idli.png",
+  "Lemon Grass Tea": "/image/lgt.png",
+  "Amla Juice": "/image/aj.png",
+  "Beetroot Juice": "/image/bj.png",
+  "Herbal Drink Mix": "/image/hd.png",
 };
 
 function ProductCard({ name, index }) {

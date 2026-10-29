@@ -138,7 +138,7 @@ export default function HealthWellness() {
       
     <section className="min-h-screen bg-[#f7f8f2] px-6 py-5">
       <div className="mx-auto max-w-8xl">
-        <h1 className="text-4xl bg-amber-200 font-semibold uppercase tracking-widest text-green-700 text-center">
+        <h1 className="text-4xl bg-transparent font-semibold uppercase tracking-widest text-green-700 text-center">
           Super Food
         </h1>
         <h5 className="mt-3 text-2xl font-bold text-[#244b3f] text-center">

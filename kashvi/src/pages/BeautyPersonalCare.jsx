@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 
 const banners = [
-  { image: "/image/FM2.png", alt: "Beauty and Personal Care Collection" },
-  { image: "/image/FM1.png", alt: "Natural Beauty Products" },
-  { image: "/image/FM3.png", alt: "Everyday Personal Care" },
+  { image: "/image/b2.png", alt: "Beauty and Personal Care Collection" },
+  { image: "/image/b1.png", alt: "Natural Beauty Products" },
+  { image: "/image/b3.png", alt: "Everyday Personal Care" },
 ];
 
 const categories = [

@@ -21,15 +21,15 @@ export default function BeautyPersonalCare() {
   return (
     <section className="min-h-screen bg-pink-50 px-6 py-14">
       <div className="mx-auto max-w-8xl">
-        <p className="font-semibold uppercase tracking-widest text-pink-700">
+        <p className="font-semibold uppercase tracking-widest text-pink-700 text-center">
           Kashvi Naturals Collection
         </p>
 
-        <h1 className="mt-3 text-4xl font-bold text-[#244b3f]">
+        <h1 className="mt-3 text-4xl font-bold text-[#244b3f] text-center">
           Beauty & Personal Care
         </h1>
 
-        <p className="mt-4 max-w-2xl text-gray-600">
+        <p className="mt-4 max-w-2xl text-gray-600 text-center">
           Discover nature-inspired beauty, herbal care and personal care
           essentials for your everyday routine.
         </p>

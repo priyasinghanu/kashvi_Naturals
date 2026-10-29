@@ -19,7 +19,7 @@ const categories = [
   },
   {
     title: "Beauty & Personal Care",
-    path: "/Beauty & Personal Care",
+    path: "/beauty-personal-care",
     description: "Natural • Herbal • Clean Beauty",
     image: "/image/bea.png",
     color: "bg-pink-50",
@@ -27,7 +27,7 @@ const categories = [
   },
   {
     title: "Home Decor & Gifts",
-    path: "/Home Decor & Gifts",
+    path: "/home-decor-gifts",
     description: "Handcrafted • Heritage • Premium Living",
     image: "/image/home.png",
     color: "bg-amber-50",
@@ -35,7 +35,7 @@ const categories = [
   },
   {
     title: "Fashion & Lifestyle",
-     path: "/Fashion & Lifestyle",
+     path: "/fashion-lifestyle",
     description: "Ethnic • Handcrafted • Contemporary Lifestyle",
     image: "/image/fashion.png",
     color: "bg-rose-50",
